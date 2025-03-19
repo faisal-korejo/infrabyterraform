@@ -1,6 +1,6 @@
 resource "aws_elb" "bar" {
   name               = "fk-terraform-elb"
-  availability_zone  = ["us-east-1a", "us-east-1b"]
+  availability_zones = ["us-east-1a", "us-east-1b"]  # Correct usage
   
   listener {
     instance_port     = 80
@@ -10,43 +10,17 @@ resource "aws_elb" "bar" {
   }
   
   health_check {
-  healthy_threshold    = 3
-  unhealthy_threshold  = 5
-  timeout              = 5
-  target               = "HTTP:80/"
-  interval             = 30
- }
- 
- instances                 = ["${aws_instance.one.id}", "${aws_instance.two.id}"]
- cross_zone_load_balancing = true
- idle_timeout              = 400
- tags = {
-   Name = "fk-tf-elb"
- }
-}
-
-/*
- resource "aws_rds_cluster" "default" {
- cluster_identifier         = "aurora-cluster-demo"
- engine                     = "aurora-mysql"
- engine_version             = "5.7.mysql_aurora.2.11.2"
- availability_zones         = ["us-east-1a", "us-east-1b"]
- database_name              = "mydb"
- master_username            = "fk"
- master_password            = "korejoali@0786"
- backup_retention_period    = 5
- preferred_backup_window    = "07:00-09:00"
- }
- 
- resource "aws_instance" "one" {
- for_each  = toset(["one", "two", "three"])
- ami            = ""
- instance_type  = "t2.micro"
- tags = {
-   Name = "instance-${each.key}"
+    healthy_threshold    = 3
+    unhealthy_threshold  = 5
+    timeout              = 5
+    target               = "HTTP:80/"
+    interval             = 30
+  }
+  
+  instances                 = ["${aws_instance.one.id}", "${aws_instance.two.id}"]
+  cross_zone_load_balancing = true
+  idle_timeout              = 400
+  tags = {
+    Name = "fk-tf-elb"
   }
 }
- 
-*/
-
-
