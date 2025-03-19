@@ -91,7 +91,7 @@ EOF
  
  variable "user_name" {
  description = ""
- type = set{string}
+ type = set(string)
  default = ["user1", "user2"]
  
  resource "aws_ebs_volume" "eight" {
