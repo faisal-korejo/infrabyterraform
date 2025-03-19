@@ -1,0 +1,10 @@
+#path: Dashboard
+Manage Jenkins
+Crendentials
+system
+Global crendentials (unrestricted)
+kind: secret text
+secret: give access key
+id: access key
+
+Give access key and secret key like this
