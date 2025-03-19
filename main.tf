@@ -5,7 +5,7 @@ provider "aws" {
 resource "aws_instance" "one" {
   ami                     = "ami-08b5b3a93ed654d19"
   instance_type           = "t2.micro"
-  key_name                = "fk-pub.pem"
+  key_name                = "fk-pub"
   vpc_security_group_ids  = [aws_security_group.five.id]
   availability_zone       = "us-east-1a"
   user_data = <<EOF
@@ -24,7 +24,7 @@ EOF
 resource "aws_instance" "two" {
   ami                     = "ami-08b5b3a93ed654d19"
   instance_type           = "t2.micro"
-  key_name                = "fk-pub.pem"
+  key_name                = "fk-pub"
   vpc_security_group_ids  = [aws_security_group.five.id]
   availability_zone       = "us-east-1b"
   tags = {
@@ -35,7 +35,7 @@ resource "aws_instance" "two" {
 resource "aws_instance" "three" {
   ami                     = "ami-08b5b3a93ed654d19"
   instance_type           = "t2.micro"
-  key_name                = "fk-pub.pem"
+  key_name                = "fk-pub"
   vpc_security_group_ids  = [aws_security_group.five.id]
   availability_zone       = "us-east-1a"
   tags = {
@@ -46,7 +46,7 @@ resource "aws_instance" "three" {
 resource "aws_instance" "four" {
   ami                     = "ami-08b5b3a93ed654d19"
   instance_type           = "t2.micro"
-  key_name                = "fk-pub.pem"
+  key_name                = "fk-pub"
   vpc_security_group_ids  = [aws_security_group.five.id]
   availability_zone       = "us-east-1b"
   tags = {
