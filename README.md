@@ -29,7 +29,7 @@ This pipeline expects a GitHub repository with Terraform configurations. In this
 ## Credentials Plugin: 
 For storing and managing AWS credentials.
 ##  Pipeline Configuration
-The Jenkins pipeline is defined in the Jenkinsfile in this repository, and it follows the Declarative Pipeline Syntax. Below is the full configuration:
+ The Jenkins pipeline is defined in the Jenkinsfile in this repository, and it follows the Declarative Pipeline Syntax. Below is the full configuration:
 
 
 ## PIPELINE
