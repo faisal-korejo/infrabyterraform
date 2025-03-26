@@ -33,9 +33,7 @@ The Jenkins pipeline is defined in the Jenkinsfile in this repository, and it fo
 
 
 ## PIPELINE
-pipeline {
-    agent any
-    
+
     environment {
         AWS_ACCESS_KEY_ID     = credentials('access_key')
         AWS_SECRET_ACCESS_KEY = credentials('secret_key')
