@@ -31,8 +31,7 @@ For storing and managing AWS credentials.
   ##  Pipeline Configuration
 The Jenkins pipeline is defined in the Jenkinsfile in this repository, and it follows the Declarative Pipeline Syntax. Below is the full configuration:
 
-groovy
-Copy
+
 pipeline {
     agent any
     
