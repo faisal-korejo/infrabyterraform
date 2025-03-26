@@ -1,7 +1,7 @@
  Jenkins Terraform Pipeline
 This repository contains a Jenkins pipeline configuration to automate the deployment of infrastructure using Terraform on AWS. The pipeline follows a standard DevOps workflow for managing infrastructure as code (IaC), and it is designed to automate tasks like initializing, planning, and applying Terraform configurations.
 
-Overview
+*Overview*
 This Jenkins pipeline automates the process of managing AWS infrastructure using Terraform. The pipeline consists of multiple stages, including checkout, initialization, planning, and action. It connects Jenkins to AWS via access credentials and allows seamless integration with Terraform for infrastructure provisioning or destruction.
 
 Prerequisites
